@@ -1,4 +1,4 @@
-"""Carrier implementations for DHL Tracker integration."""
+"""Carrier implementations for German Parcel Tracker integration."""
 
 from .base import CarrierBase
 from .dhl import DHLCarrier
