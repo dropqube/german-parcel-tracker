@@ -1,0 +1,11 @@
+{
+  "domain": "dhl_tracker",
+  "name": "DHL Sendungsverfolgung",
+  "version": "3.1.0",
+  "config_flow": true,
+  "documentation": "https://developer.dhl.com/api-reference/dhl-paket-de-sendungsverfolgung-post-paket-deutschland",
+  "requirements": ["aiohttp"],
+  "codeowners": ["@antman"],
+  "iot_class": "cloud_polling",
+  "integration_type": "service"
+}
