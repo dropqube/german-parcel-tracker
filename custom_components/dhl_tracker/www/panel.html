@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sendungsverfolgung</title>
+    <script type="module" src="/hacsfiles/lit/lit.min.js"></script>
+    <style>
+      body { font-family: sans-serif; margin: 1em; }
+      h1 { font-size: 1.5em; }
+      .tracking-entry { border: 1px solid #ccc; border-radius: 8px; padding: 1em; margin: 1em 0; }
+      .carrier { font-weight: bold; color: #555; }
+    </style>
+  </head>
+  <body>
+    <h1>📦 Paketverfolgung</h1>
+    <p>Dies ist eine Übersicht aller Sendungen, die über die Integration <code>dhl_tracker</code> verwaltet werden.</p>
+
+    <div id="entries"></div>
+
+    <script>
+      window.onload = async () => {
+        const hass = document.querySelector('home-assistant');
+        const stateKeys = Object.keys(hass.hass.states).filter(k => k.startsWith('sensor.track_'));
+        const container = document.getElementById('entries');
+
+        for (const key of stateKeys) {
+          const state = hass.hass.states[key];
+          const attr = state.attributes;
+          const div = document.createElement('div');
+          div.className = 'tracking-entry';
+          div.innerHTML = `
+            <div class="carrier">${attr.carrier?.toUpperCase() || "Unbekannt"}</div>
+            <div><strong>Status:</strong> ${state.state}</div>
+            <div><strong>Nummer:</strong> ${attr.tracking_number}</div>
+            <div><strong>Von:</strong> ${attr.origin || "-"}</div>
+            <div><strong>Nach:</strong> ${attr.destination || "-"}</div>
+            <div><strong>Letztes Update:</strong> ${attr.timestamp || "-"}</div>
+          `;
+          container.appendChild(div);
+        }
+      };
+    </script>
+  </body>
+</html>
