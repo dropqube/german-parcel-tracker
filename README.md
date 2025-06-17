@@ -20,6 +20,10 @@ Verfolge deine Pakete von DHL, Hermes und DPD direkt in Home Assistant – mit d
 > **Hinweis:** Diese Integration ist über [HACS](https://hacs.xyz/) installierbar.
 
 > **Voraussetzung:** Home Assistant 2025.12 oder neuer
+>
+> **Status:** Die DHL-Anbindung nutzt aktuell die Sandbox-Umgebung
+> `https://api-sandbox.dhl.com/parcel/de/tracking/v0/shipments`. Für den
+> produktiven Einsatz muss der Endpunkt angepasst werden.
 
 ---
 
