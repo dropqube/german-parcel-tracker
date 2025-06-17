@@ -1,0 +1,41 @@
+{
+    "config": {
+      "step": {
+        "user": {
+          "title": "DHL Tracker Setup",
+          "description": "Geben Sie Ihren DHL API-Schlüssel ein. Diesen können Sie auf {documentation_url} beantragen.",
+          "data": {
+            "api_key": "DHL API-Schlüssel"
+          }
+        }
+      },
+      "error": {
+        "invalid_api_key": "Ungültiger API-Schlüssel",
+        "cannot_connect": "Verbindung fehlgeschlagen",
+        "unknown": "Unbekannter Fehler"
+      },
+      "abort": {
+        "already_configured": "Integration bereits konfiguriert"
+      }
+    },
+    "options": {
+      "step": {
+        "add_tracking": {
+          "title": "Sendungsnummer hinzufügen",
+          "description": "Fügen Sie eine neue Sendungsnummer hinzu.\n\nAktuell konfiguriert:\n{current_trackings}",
+          "data": {
+            "carrier": "Paketdienst",
+            "tracking_number": "Sendungsnummer"
+          },
+          "data_description": {
+            "carrier": "Wählen Sie den Paketdienst aus",
+            "tracking_number": "Geben Sie die Sendungsnummer ein"
+          }
+        }
+      },
+      "error": {
+        "invalid_tracking_number": "Ungültige Sendungsnummer",
+        "tracking_already_exists": "Diese Sendungsnummer ist bereits konfiguriert"
+      }
+    }
+  }
