@@ -1,3 +1,17 @@
+# WARNING - THIS DOES NOT WORK YET - DO NOT USE
+# WARNING - THIS DOES NOT WORK YET - DO NOT USE
+# WARNING - THIS DOES NOT WORK YET - DO NOT USE
+# WARNING - THIS DOES NOT WORK YET - DO NOT USE
+# WARNING - THIS DOES NOT WORK YET - DO NOT USE
+
+
+
+
+
+
+
+
+
 # DHL Tracker – Multi-Carrier Integration für Home Assistant
 
 Verfolge deine Pakete von DHL, Hermes und DPD direkt in Home Assistant – mit dieser modularen, erweiterbaren Integration.
