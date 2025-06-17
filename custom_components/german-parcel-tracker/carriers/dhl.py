@@ -14,6 +14,8 @@ class DHLCarrier(CarrierBase):
     # DHL Paket DE Sendungsverfolgung API. For production this
     # should be changed to "https://api-eu.dhl.com/parcel/de/tracking/v0/shipments".
     API_URL = "https://api-sandbox.dhl.com/parcel/de/tracking/v0/shipments"
+    # API_URL = "https://api-eu.dhl.com/track/shipments"
+
 
     def __init__(self, api_key: str) -> None:
         """Initialize DHL carrier with API key."""
