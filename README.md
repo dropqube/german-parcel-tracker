@@ -2,6 +2,8 @@
 
 Verfolge deine Pakete von DHL, Hermes und DPD direkt in Home Assistant – mit dieser modularen, erweiterbaren Integration.
 
+> **Voraussetzung:** Home Assistant 2025.12 oder neuer
+
 ---
 
 ## ✨ Unterstützte Dienste
