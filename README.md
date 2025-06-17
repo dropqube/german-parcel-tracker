@@ -12,7 +12,7 @@
 
 
 
-## DHL Tracker – Multi-Carrier Integration für Home Assistant
+## German Parcel Tracker – Multi-Carrier Integration für Home Assistant
 
 Verfolge deine Pakete von DHL, Hermes und DPD direkt in Home Assistant – mit dieser modularen, erweiterbaren Integration.
 
@@ -51,11 +51,11 @@ Verfolge deine Pakete von DHL, Hermes und DPD direkt in Home Assistant – mit d
 ### Manuelle Installation
 
 ### 1. Dateien kopieren
-Lade das ZIP herunter und entpacke den Ordner `custom_components/dhl_tracker/` in dein Home Assistant `config`-Verzeichnis.
+Lade das ZIP herunter und entpacke den Ordner `custom_components/german-parcel-tracker/` in dein Home Assistant `config`-Verzeichnis.
 
 Pfad-Beispiel:
 ```
-/config/custom_components/dhl_tracker/
+/config/custom_components/german-parcel-tracker/
 ```
 
 ### 2. Panel einrichten (optional)
@@ -66,21 +66,21 @@ panel_custom:
   - name: pakettracker
     sidebar_title: Paketverfolgung
     sidebar_icon: mdi:truck
-    url_path: dhl-tracker
-    module_url: /local/custom_components/dhl_tracker/www/panel.html
+    url_path: german-parcel-tracker
+    module_url: /local/custom_components/german-parcel-tracker/www/panel.html
     embed_iframe: true
     require_admin: false
 ```
 
 Stelle sicher, dass `panel.html` unter `www` vorhanden ist:
 ```
-/config/www/custom_components/dhl_tracker/panel.html
+/config/www/custom_components/german-parcel-tracker/panel.html
 ```
 
 ### 3. Home Assistant neustarten
 
 ### 4. Integration hinzufügen
-Einstellungen → Geräte & Dienste → Integration hinzufügen → **DHL Tracker** auswählen
+Einstellungen → Geräte & Dienste → Integration hinzufügen → **German Parcel Tracker** auswählen
 
 ---
 

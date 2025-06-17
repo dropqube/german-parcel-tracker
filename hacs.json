@@ -1,6 +1,6 @@
 {
   "name": "German Parcel Tracker",
   "content_in_root": false,
-  "domains": ["dhl_tracker"],
+  "domains": ["german-parcel-tracker"],
   "render_readme": true
 }
