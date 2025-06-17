@@ -2,6 +2,10 @@
 
 Verfolge deine Pakete von DHL, Hermes und DPD direkt in Home Assistant – mit dieser modularen, erweiterbaren Integration.
 
+> **Hinweis:** Diese Integration ist über [HACS](https://hacs.xyz/) installierbar.
+
+> **Voraussetzung:** Home Assistant 2025.12 oder neuer
+
 ---
 
 ## ✨ Unterstützte Dienste
@@ -22,6 +26,14 @@ Verfolge deine Pakete von DHL, Hermes und DPD direkt in Home Assistant – mit d
 ---
 
 ## 🛠 Installation
+
+### Installation über HACS
+1. Sorge dafür, dass die **aktuellste HACS-Version** installiert ist. Anleitung unter [hacs.xyz](https://hacs.xyz/).
+2. Füge dieses Repository in HACS als **Benutzerdefiniertes Repository** (Typ *Integration*) hinzu.
+3. Suche nach "German Parcel Tracker" und installiere das Paket.
+4. Starte Home Assistant neu.
+
+### Manuelle Installation
 
 ### 1. Dateien kopieren
 Lade das ZIP herunter und entpacke den Ordner `custom_components/dhl_tracker/` in dein Home Assistant `config`-Verzeichnis.

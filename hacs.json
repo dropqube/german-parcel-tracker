@@ -1,0 +1,6 @@
+{
+  "name": "German Parcel Tracker",
+  "content_in_root": false,
+  "domains": ["dhl_tracker"],
+  "render_readme": true
+}
