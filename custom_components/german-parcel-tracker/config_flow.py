@@ -6,7 +6,7 @@ from homeassistant import config_entries
 from homeassistant.core import callback
 from homeassistant.data_entry_flow import FlowResult
 
-DOMAIN = "dhl_tracker"
+DOMAIN = "german-parcel-tracker"
 
 CONF_API_KEY = "api_key"
 CONF_TRACKINGS = "tracking_numbers"
@@ -14,7 +14,7 @@ CONF_TRACKINGS = "tracking_numbers"
 DEFAULT_TRACKINGS = []
 
 class DHLConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for DHL Tracker."""
+    """Handle a config flow for German Parcel Tracker."""
 
     VERSION = 1
 
@@ -31,11 +31,11 @@ class DHLConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 errors[CONF_API_KEY] = "invalid_api_key"
             else:
                 # Check if already configured
-                await self.async_set_unique_id(f"dhl_tracker_{api_key[:8]}")
+                await self.async_set_unique_id(f"german-parcel-tracker_{api_key[:8]}")
                 self._abort_if_unique_id_configured()
 
                 return self.async_create_entry(
-                    title="DHL Tracker",
+                    title="German Parcel Tracker",
                     data={
                         CONF_API_KEY: api_key,
                     },
@@ -64,7 +64,7 @@ class DHLConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         return DHLOptionsFlowHandler(config_entry)
 
 class DHLOptionsFlowHandler(config_entries.OptionsFlow):
-    """Handle DHL Tracker options."""
+    """Handle German Parcel Tracker options."""
 
     def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
         """Initialize options flow."""

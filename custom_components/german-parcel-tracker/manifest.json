@@ -1,6 +1,6 @@
 {
-  "domain": "dhl_tracker",
-  "name": "DHL Sendungsverfolgung",
+  "domain": "german-parcel-tracker",
+  "name": "German Parcel Tracker",
   "version": "3.2.0",
   "config_flow": true,
   "documentation": "https://developer.dhl.com/api-reference/dhl-paket-de-sendungsverfolgung-post-paket-deutschland",

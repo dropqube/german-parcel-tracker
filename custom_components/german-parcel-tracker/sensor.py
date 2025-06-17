@@ -19,14 +19,14 @@ from .carriers.dpd import DPDCarrier
 _LOGGER = logging.getLogger(__name__)
 
 SCAN_INTERVAL = timedelta(minutes=30)
-DOMAIN = "dhl_tracker"
+DOMAIN = "german-parcel-tracker"
 
 async def async_setup_entry(
     hass: HomeAssistant, 
     entry: ConfigEntry, 
     async_add_entities: AddEntitiesCallback
 ) -> None:
-    """Set up DHL Tracker sensors from config entry."""
+    """Set up German Parcel Tracker sensors from config entry."""
     
     @callback
     def async_add_tracking_entities():
@@ -34,7 +34,7 @@ async def async_setup_entry(
         api_key = entry.data.get("api_key")
         carrier_configs = entry.options.get("tracking_numbers", [])
 
-        _LOGGER.info("Setting up DHL Tracker sensors - API Key: %s, Tracking configs: %s", 
+        _LOGGER.info("Setting up German Parcel Tracker sensors - API Key: %s, Tracking configs: %s", 
                      "***" if api_key else "None", len(carrier_configs))
 
         if not carrier_configs:
