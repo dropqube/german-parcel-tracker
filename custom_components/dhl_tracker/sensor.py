@@ -8,10 +8,7 @@ from homeassistant.helpers.update_coordinator import (
     UpdateFailed,
     CoordinatorEntity,
 )
-from homeassistant.helpers.entity_platform import (
-    AddEntitiesCallback,
-    async_get_current_platform,
-)
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.config_entries import ConfigEntry
 
@@ -57,7 +54,7 @@ async def async_setup_entry(
 
             # Check if entity already exists
             unique_id = f"track_{carrier_type}_{tracking_number}"
-            if hass.states.get(f"sensor.{unique_id.replace('_', '_').lower()}"):
+            if hass.states.get(f"sensor.{unique_id.lower()}"):
                 _LOGGER.info("Entity %s already exists, skipping", unique_id)
                 continue
 
@@ -179,14 +176,14 @@ class TrackingSensor(CoordinatorEntity, SensorEntity):
                 "status_description": shipment.get("status", {}).get("description"),
                 "timestamp": shipment.get("status", {}).get("timestamp"),
                 "carrier": self._carrier,
-                "last_update": self.coordinator.last_update_success_time,
+                "last_update": getattr(self.coordinator, "last_update_success_time", None),
             }
         except (KeyError, TypeError) as err:
             _LOGGER.warning("Error getting attributes for %s: %s", self._attr_unique_id, err)
             return {
                 "tracking_number": self._tracking_number,
                 "carrier": self._carrier,
-                "last_update": self.coordinator.last_update_success_time,
+                "last_update": getattr(self.coordinator, "last_update_success_time", None),
                 "error": str(err),
             }
 
